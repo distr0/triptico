@@ -1,0 +1,14 @@
+[Unit]
+Description=Subidor de audio
+After=network.target
+
+[Service]
+ExecStart=/bin/bash '/home/pi/upload.sh'
+WorkingDirectory=/home/pi
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
