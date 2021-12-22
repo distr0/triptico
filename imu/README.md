@@ -18,7 +18,7 @@ sudo systemctl start apagado.service imu.service sftp.service
 ```
 
 ### Explicación del funcionamiento
-1- imu.service ejecuta y mantiene imu.py quien registra los datos del IMU(s) en ramdisk/ inicialmente y luego en upload/
-2- sftp.service ejecuta y mantiene sftp.py quien revisa upload/ y sube con sftp.sh. Si falla mueve los archivos a reUpload/RPiIMU/
-3- Cron ejecuta rftp.sh cada un minuto para subir lo que exista en reUpload/RPiIMU/ 
-4- apagado.service ejecuta y mantiene apagado.py quien escucha el puerto GPIO 16. Cuando este es activado apaga el equipo
+* imu.service ejecuta y mantiene imu.py quien registra los datos del IMU(s) en ramdisk/ inicialmente y luego en upload/
+* sftp.service ejecuta y mantiene sftp.py quien revisa upload/ y sube con sftp.sh. Si falla mueve los archivos a reUpload/RPiIMU/
+* Cron ejecuta rftp.sh cada un minuto para subir lo que exista en reUpload/RPiIMU/ 
+* apagado.service ejecuta y mantiene apagado.py quien escucha el puerto GPIO 16. Cuando este es activado apaga el equipo

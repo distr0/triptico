@@ -13,6 +13,6 @@ sudo systemctl start apagado.service upload.service rec.service
 ```
 
 ### Explicación del funcionamiento
-1- rec.service ejecuta y mantiene sox_rec.sh quien graba audio en temp/
-2- upload.service ejecuta y mantiene upload.sh quien revisa temp/ y sube con upload.sh. Si falla mueve los archivos a fail/
-3- apagado.service ejecuta y mantiene apagado.py quien escucha el puerto GPIO 16. Cuando este es activado apaga el equipo
+* rec.service ejecuta y mantiene sox_rec.sh quien graba audio en temp/
+* upload.service ejecuta y mantiene upload.sh quien revisa temp/ y sube con upload.sh. Si falla mueve los archivos a fail/
+* apagado.service ejecuta y mantiene apagado.py quien escucha el puerto GPIO 16. Cuando este es activado apaga el equipo
